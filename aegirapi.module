@@ -1,0 +1,27 @@
+<?php
+
+/**
+ * Implementation of hook_autoload_info().
+ */
+function aegirapi_autoload_info() {
+  require_once('aegirapi.inc');
+  return _aegirapi_autoload_info();
+}
+
+/**
+ * Implementation of hook_perm().
+ */
+function aegirapi_perm() {
+  return array('aegirapi use api');
+}
+
+/**
+ * Implementation of hook_services_resources().
+ */
+function aegirapi_services_resources() {
+  return array(
+    'aegir-platform' => ServicesOop::definitionFromClass('AegirPlatformApi'),
+    'aegir-package' => ServicesOop::definitionFromClass('AegirPackageApi'),
+    'aegir-site' => ServicesOop::definitionFromClass('AegirSiteApi'),
+  );
+}

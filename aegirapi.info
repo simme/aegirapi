@@ -1,0 +1,9 @@
+name = "Ægir API"
+description = "Defines resources for an Æegir API"
+package = Hosting
+dependencies[] = services
+dependencies[] = services_oop
+dependencies[] = query_builder
+dependencies[] = hosting
+
+core = 6.x

@@ -1,0 +1,3 @@
+<?php
+
+include_once('agirapi_features.features.inc');
