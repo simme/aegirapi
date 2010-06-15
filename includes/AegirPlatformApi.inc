@@ -57,15 +57,13 @@ class AegirPlatformApi {
    * @Access(callback='user_access', args={'aegirapi retrieve platform info'})
    */
   public static function listPackages($nid, $type = NULL) {
-    $packages = array();
-
     $args = array(
       'rid' => $platform,
       'n.status' => 1,
     );
 
     if ($type) {
-      $args['package_type'] = 'profile';
+      $args['package_type'] = $type;
     }
 
     return hosting_package_instances_load($args);
