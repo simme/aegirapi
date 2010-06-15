@@ -27,7 +27,7 @@ class AegirPlatformApi {
    *  Whether to get the profiles for the platform.
    * @return object
    *
-   * @Access(callback='user_access', args={'aegirapi use api'})
+   * @Access(callback='user_access', args={'aegirapi retrieve platform info'})
    */
   public static function retrieve($nid, $with_profiles = FALSE) {
     $node = node_load($nid);
@@ -54,7 +54,7 @@ class AegirPlatformApi {
    *  The type of packages to list.
    * @return array
    *
-   * @Access(callback='user_access', args={'aegirapi use api'})
+   * @Access(callback='user_access', args={'aegirapi retrieve platform info'})
    */
   public static function listPackages($nid, $type = NULL) {
     $packages = array();

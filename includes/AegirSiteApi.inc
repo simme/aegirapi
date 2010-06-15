@@ -16,7 +16,7 @@ class AegirSiteApi {
    * @param array $parameters ["param"]
    * @return array
    *
-   * @Access(callback='user_access', args={'aegirapi use api'})
+   * @Access(callback='user_access', args={'aegirapi retrieve site info'})
    */
   public static function index($page=0, $fields=array(), $parameters=array()) {
     $builder = new AegirSiteQueryBuilder();
@@ -59,7 +59,7 @@ class AegirSiteApi {
    *  The nid of the site.
    * @return object
    *
-   * @Access(callback='user_access', args={'aegirapi use api'})
+   * @Access(callback='user_access', args={'aegirapi retrieve site info'})
    */
   public static function retrieve($nid) {
     $node = node_load($nid);
@@ -78,7 +78,7 @@ class AegirSiteApi {
    * @param object $data ["data"]
    * @return object
    *
-   * @Access(callback='user_access', args={'aegirapi use api'})
+   * @Access(callback='user_access', args={'aegirapi create site'})
    */
   public static function create($data) {
     global $user;
@@ -131,6 +131,8 @@ class AegirSiteApi {
    * @param int $nid ["path", 0]
    * @param int $platform ["param", "platform"]
    * @return object
+   *
+   * @Access(callback='user_access', args={'aegirapi migrate site'})
    */
   public static function migrateTo($nid, $platform) {
     $result = (object)array();
@@ -161,6 +163,8 @@ class AegirSiteApi {
    *
    * @param int $nid ["path", 0]
    * @return object
+   *
+   * @Access(callback='user_access', args={'aegirapi backup site'})
    */
   public static function backup($nid) {
     $result = (object)array();

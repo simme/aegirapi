@@ -12,7 +12,7 @@ class AegirPackageApi {
    *  The nid of the platform.
    * @return object
    *
-   * @Access(callback='user_access', args={'aegirapi use api'})
+   * @Access(callback='user_access', args={'aegirapi retrieve package info'})
    */
   public static function retrieve($nid) {
     $node = node_load($nid);

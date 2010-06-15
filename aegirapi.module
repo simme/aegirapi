@@ -12,7 +12,14 @@ function aegirapi_autoload_info() {
  * Implementation of hook_perm().
  */
 function aegirapi_perm() {
-  return array('aegirapi use api');
+  return array(
+    'aegirapi retrieve platform info',
+    'aegirapi retrieve package info',
+    'aegirapi retrieve site info',
+    'aegirapi create site',
+    'aegirapi migrate site',
+    'aegirapi backup site',
+  );
 }
 
 /**
