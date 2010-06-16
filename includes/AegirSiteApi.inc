@@ -39,6 +39,7 @@ class AegirSiteApi {
 
     // Always enforce the node status condition
     $parameters['status'] = 1;
+    $parameters['type'] = 'site';
 
     // Generate and execute the sql
     list($sql, $params) = $builder->query($fields, $parameters);
