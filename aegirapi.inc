@@ -47,10 +47,15 @@ function aegirapi_run_hosting_task(object $result, object $node, string $task, a
   if (!empty($tasks[$node->type][$task])) {
     $form_state = array();
     $form_state['values'] = array(
+      'nid' => $node->nid,
+      'task' => $task,
       'parameters' => $parameters,
+      'confirm' => 1,
       'op' => $type_tasks[$task]['title'],
+      'submit' => $type_tasks[$task]['title'],
     );
-    $res = drupal_execute('hosting_task_confirm_form', $form_state, $node, 'migrate');
+
+    $res = drupal_execute('hosting_task_confirm_form', $form_state, $node, $task);
 
     if (($errors = form_get_errors())) {
       $result->error = 'failed:406';
