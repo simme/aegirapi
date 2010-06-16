@@ -109,7 +109,7 @@ class AegirTaskApi {
    *
    * @Access(callback='user_access', args={'aegirapi retrieve task info'})
    */
-  public static function taskLog($nid, $vid = NULL) {
+  public static function log($nid, $vid = NULL) {
     $log = array();
 
     if ($vid === NULL) {
