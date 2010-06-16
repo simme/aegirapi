@@ -7,7 +7,6 @@ class AegirTaskQueryBuilder extends QueryBuilder {
     $this->add_table('ht', 'INNER JOIN {hosting_task} AS ht ON ht.vid=n.vid', 'n', array(
       'task_type' => array(
         'type' => 'string',
-        'column' => 'language',
         'condition' => QueryBuilder::CONDITION_MATCH,
       ),
       'site' => array(
