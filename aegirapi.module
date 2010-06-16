@@ -31,5 +31,6 @@ function aegirapi_services_resources() {
     'aegir-platform' => ServicesOop::definitionFromClass('AegirPlatformApi'),
     'aegir-package' => ServicesOop::definitionFromClass('AegirPackageApi'),
     'aegir-site' => ServicesOop::definitionFromClass('AegirSiteApi'),
+    'aegir-task' => ServicesOop::definitionFromClass('AegirTaskApi'),
   );
 }
