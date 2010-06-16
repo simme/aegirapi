@@ -102,7 +102,7 @@ class AegirTaskApi {
    *
    * @param int $nid ["path", "0"]
    *  The nid of the task.
-   * @param int $vid ["path", "2"]
+   * @param int $vid ["param", "revision"]
    *  Optional. The vid of the task revision. If omitted you will get the log
    *  of the latest revision.
    * @return array
