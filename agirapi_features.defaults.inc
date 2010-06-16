@@ -170,6 +170,22 @@ function _agirapi_features_default_services_endpoint() {
           ),
         ),
       ),
+      'relationships' => array(
+        'revisions' => array(
+          'enabled' => 1,
+          'services_oauth' => array(
+            'credentials' => 'token',
+            'authorization' => '*',
+          ),
+        ),
+        'log' => array(
+          'enabled' => 1,
+          'services_oauth' => array(
+            'credentials' => 'token',
+            'authorization' => '*',
+          ),
+        ),
+      ),
     ),
   );
 
