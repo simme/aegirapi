@@ -17,6 +17,12 @@ function _aegirapi_autoload_info() {
     'AegirSiteQueryBuilder' => array(
       'file' => 'includes/AegirSiteQueryBuilder.inc',
     ),
+    'AegirTaskApi' => array(
+      'file' => 'includes/AegirTaskApi.inc',
+    ),
+    'AegirTaskQueryBuilder' => array(
+      'file' => 'includes/AegirTaskQueryBuilder.inc',
+    ),
   );
 }
 

@@ -19,6 +19,7 @@ function aegirapi_perm() {
     'aegirapi create site',
     'aegirapi migrate site',
     'aegirapi backup site',
+    'aegirapi retrieve task info',
   );
 }
 

@@ -152,6 +152,25 @@ function _agirapi_features_default_services_endpoint() {
         ),
       ),
     ),
+    'aegir-task' => array(
+      'alias' => 'task',
+      'operations' => array(
+        'retrieve' => array(
+          'enabled' => 1,
+          'services_oauth' => array(
+            'credentials' => 'token',
+            'authorization' => '*',
+          ),
+        ),
+        'index' => array(
+          'enabled' => 1,
+          'services_oauth' => array(
+            'credentials' => 'token',
+            'authorization' => '*',
+          ),
+        ),
+      ),
+    ),
   );
 
   $export['aegirapi'] = $endpoint;
